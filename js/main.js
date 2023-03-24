@@ -1,0 +1,31 @@
+$(document).ready(function(){
+    $('.Blog').mouseenter(function(){
+        $('.dropdown1').fadeIn(300)
+    })
+    $('.Blog').mouseleave(function(){
+        $('.dropdown1').fadeOut(300)
+    })
+    $('.pages').mouseenter(function(){
+        $('.dropdown2').fadeIn(300)
+    })
+    $('.pages').mouseleave(function(){
+        $('.dropdown2').fadeOut(300)
+    })
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=525){
+            $('.scroll').fadeIn(200)
+        }
+        else{
+            $('.scroll').fadeOut(200)
+        }
+        if($(window).scrollTop()>=200){
+            $('.main_header').addClass('header_active')
+        }
+        else{
+            $('.main_header').removeClass('header_active')
+        }
+    })
+    $('.scroll').click(function(){
+        $(window).scrollTop(0)
+    })
+})
